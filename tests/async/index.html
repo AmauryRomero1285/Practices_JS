@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Practices</title>
+
+    <!-- Scripts y Fuentes -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="stylesheet" />
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        // Colores extraídos de tu logo DevCorp
+                        "brand-cyan": "#00D2FF",
+                        "brand-dark": "#010B14",
+                        "brand-gray": "#A3B1C6",
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+
+    <style>
+        /* Ajuste para que los símbolos de Material se alineen perfecto */
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-brand-dark text-white min-h-screen p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <header class="flex items-center justify-between mb-12 pb-6 border-b border-white/10">
+            <h1 class="text-3xl font-extrabold tracking-tight">
+                Usuarios <span class="text-brand-cyan">Registrados</span>
+            </h1>
+
+            <button id="btnChargeUsers"
+                class="group flex items-center gap-2 bg-brand-cyan/10 hover:bg-brand-cyan border border-brand-cyan text-brand-cyan hover:text-brand-dark px-5 py-2.5 rounded-lg font-semibold transition-all duration-300 shadow-[0_0_15px_rgba(0,210,255,0.2)]">
+                Cargar Usuarios 
+            </button>
+        </header>
+
+
+        <div id="userContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white/5 border border-white/10 p-6 rounded-xl animate-pulse">
+                <div class="w-12 h-12 bg-white/10 rounded-full mb-4"></div>
+                <div class="h-4 bg-white/10 rounded w-3/4 mb-2"></div>
+                <div class="h-3 bg-white/10 rounded w-1/2"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/tests/async/js/scripts.js"></script>
+</body>
+
+</html>
